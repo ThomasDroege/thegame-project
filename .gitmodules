@@ -1,0 +1,6 @@
+[submodule "thegame"]
+	path = thegame
+	url = https://github.com/ThomasDroege/thegame
+[submodule "thegame-frontend"]
+	path = thegame-frontend
+	url = https://github.com/ThomasDroege/thegame-frontend
