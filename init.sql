@@ -126,3 +126,34 @@ VALUES
 	(nextval('thegame.data.seq_building'), 2, 3, 1),
 	(nextval('thegame.data.seq_building'), 2, 4, 1),
 	(nextval('thegame.data.seq_building'), 2, 5, 0);
+
+--- Timer Types ---
+CREATE TABLE thegame.data.timer_types (
+	timer_type_id int NOT NULL,
+	timer_name varchar(255) NOT NULL,
+	primary key (timer_type_id)
+);
+
+INSERT INTO thegame.data.timer_types
+VALUES
+	(1, 'building'),
+	(2, 'unit');
+
+
+--- Timer ---
+CREATE SEQUENCE thegame.data.seq_timer
+	START WITH 1
+	INCREMENT BY 1;
+
+CREATE TABLE thegame.data.timer (
+	timer_id int NOT NULL,
+	village_id int references thegame.data.villages,
+	timer_type_id int references thegame.data.timer_types,
+	update_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	primary key (timer_id)
+);
+
+INSERT INTO thegame.data.timer
+VALUES
+	(nextval('thegame.data.seq_timer'), 1, 1),
+	(nextval('thegame.data.seq_timer'), 2, 1);

@@ -6,14 +6,20 @@
 
 If you want to shutdown the containers (with deleting of the existing volumes) you need to type the following command ```docker-compose down -v```
 
+## Update The Game Project Repository
+```git submodule update --remote```
+
+```git add thegame```
+
+```git add thegame-frontend```
+
+```git commit -m "Update submodules to latest version"```
+
 
 ## Techstack:
 
 SpringBoot, Postgres, Docker, React
 
-Business Package: enthält die Entitäten, welche die DB Struktur darstellt
-
-UI Package: Funktionalitäten, welche in der UI zur Verfügung gestellt werden, gruppiert nach den Masken
 
 # Historie:
 Stand 13.05.2023
