@@ -149,11 +149,12 @@ CREATE TABLE thegame.data.timer (
 	timer_id int NOT NULL,
 	village_id int references thegame.data.villages,
 	timer_type_id int references thegame.data.timer_types,
+	object_type_id int NOT NULL,
 	update_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	primary key (timer_id)
 );
 
 INSERT INTO thegame.data.timer
 VALUES
-	(nextval('thegame.data.seq_timer'), 1, 1),
-	(nextval('thegame.data.seq_timer'), 2, 1);
+	(nextval('thegame.data.seq_timer'), 1, 1, 1),
+	(nextval('thegame.data.seq_timer'), 2, 1, 1);
