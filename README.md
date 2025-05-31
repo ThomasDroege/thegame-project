@@ -20,6 +20,8 @@ If you want to shutdown the containers (with deleting of the existing volumes) y
 
 SpringBoot, Postgres, Docker, React
 
+##ToDo:
+Für das 1. Ausführen muss das Backend gebaut werden (mvn clean install) und das Frontend über npm gebaut (npm install) werden
 
 # Historie:
 Stand 13.05.2023
